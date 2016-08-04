@@ -1,0 +1,196 @@
+@charset "UTF-8";
+/**
+ * Kryptonikdaily
+ *
+ * Copyright (c) 2016 Kryptonik
+ */
+@font-face {
+  font-family: 'SnappyService';
+  src: url('../fonts/SnappyService.eot');
+  src: url('../fonts/SnappyService.eot?#iefix') format('embedded-opentype'), url('../fonts/SnappyService.woff') format('woff'), url('../fonts/SnappyService.ttf') format('truetype'), url('../fonts/SnappyService.svg#SnappyService') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+body {
+  color: #999999;
+  font-family: Georgia, serif;
+  font-style: italic;
+  font-size: 18px;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #129700;
+  font-family: Raleway, Arial, sans-serif;
+  font-style: normal;
+}
+h1 {
+  margin: 55px 0;
+}
+header p {
+  color: #4d4d4d;
+  font-size: 1.4em;
+  font-style: normal;
+}
+a.list-group-item,
+button.list-group-item {
+  color: #999999;
+}
+a.list-group-item-success,
+button.list-group-item-success {
+  color: #3c763d;
+}
+a.list-group-item-warning,
+button.list-group-item-warning {
+  color: #8a6d3b;
+}
+a.list-group-item-danger,
+button.list-group-item-danger {
+  color: #a94442;
+}
+a.list-group-item-info,
+button.list-group-item-info {
+  color: #31708f;
+}
+.non-italic {
+  font-style: normal;
+}
+.k-header,
+.k-footer {
+  background: #129700;
+}
+.k-header {
+  height: 15px;
+}
+.circle {
+  background: #129700;
+  border-radius: 50%;
+  height: 150px;
+  margin-bottom: 15px;
+  text-align: center;
+  width: 150px;
+}
+.circle-counter {
+  color: #FFFFFF;
+  font-size: 2em;
+  position: relative;
+  top: 50px;
+}
+.circle-white {
+  background: #FFFFFF;
+  border-radius: 50%;
+  height: 50px;
+  padding-left: 2px;
+  padding-top: 5px;
+  text-align: center;
+  width: 50px;
+}
+.circle-white span {
+  color: #129700;
+  font-family: 'SnappyService';
+  font-size: 2em;
+  font-style: normal;
+}
+.logo {
+  display: block;
+  padding-top: 10px;
+  padding-left: 3px;
+  font-size: 0.8em;
+}
+.logo:hover {
+  text-shadow: 1px 1px #0c6400;
+  padding-top: 9px;
+  padding-left: 4px;
+}
+.logo .circle-white,
+.logo p {
+  display: inline-block;
+  vertical-align: middle;
+}
+.logo p {
+  font-family: Raleway;
+  font-style: normal;
+  color: #FFFFFF;
+  padding-top: 9px;
+  padding-left: 3px;
+}
+.fa-check-square-o {
+  color: #129700;
+}
+.btn-link {
+  border-color: #129700;
+  border-radius: 10px;
+  border-width: 2px;
+  color: #129700;
+  margin: 55px auto;
+}
+.btn-link:hover {
+  background: #129700;
+  border-color: #129700;
+  border-radius: 10px;
+  border-width: 2px;
+  color: #FFFFFF;
+  text-decoration: none;
+}
+img.cv {
+  display: block !important;
+  height: 150px;
+  margin-top: -20px;
+  width: 150px;
+  opacity: 0;
+}
+.page2 .job {
+  margin: 15px auto;
+}
+.page2 .job:first-child {
+  font-size: 0.9em;
+}
+.page3 .btn-group {
+  margin: 0 auto;
+  text-align: center;
+  width: inherit;
+  display: inline-block;
+}
+/*
+body.js {
+  overflow-x: hidden;
+}
+.js .page {
+  display: inline-block;
+  vertical-align: top;
+}*/
+.js .page2,
+.js .page3,
+.btn-link {
+  display: none;
+}
+.js .btn-link {
+  display: block;
+}
+.js .stalk {
+  opacity: 0;
+}
+hr {
+  border-top-color: #129700;
+}
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 70px;
+}
+.k-footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 70px;
+  background-color: #129700;
+}

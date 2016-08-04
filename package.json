@@ -1,0 +1,48 @@
+{
+  "name": "kryptonikdailystatic",
+  "version": "1.0.0",
+  "description": "Kryptonik page from business card link",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js",
+    "lint": "./node_modules/.bin/eslint ./app/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kadiks/kryptonikdailystatic.git"
+  },
+  "author": "Jénaïc Cambré <me@jenaiccambre.com> (www.jenaiccambre.com)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kadiks/kryptonikdailystatic/issues"
+  },
+  "homepage": "https://github.com/kadiks/kryptonikdailystatic#readme",
+  "devDependencies": {
+    "autoprefixer-loader": "^3.2.0",
+    "babel-core": "^6.11.4",
+    "babel-loader": "^6.2.4",
+    "babel-preset-es2015": "^6.9.0",
+    "babel-preset-react": "^6.11.1",
+    "css-loader": "^0.23.1",
+    "eslint": "^3.2.0",
+    "eslint-config-airbnb": "^9.0.1",
+    "eslint-plugin-import": "^1.12.0",
+    "eslint-plugin-jsx-a11y": "^2.0.1",
+    "eslint-plugin-react": "^5.2.2",
+    "file-loader": "^0.9.0",
+    "less": "^2.7.1",
+    "less-loader": "^2.2.3",
+    "minimist": "^1.2.0",
+    "style-loader": "^0.13.1",
+    "webpack": "^1.13.1",
+    "webpack-dev-server": "^1.14.1"
+  },
+  "dependencies": {
+    "countup.js": "^1.7.1",
+    "extract-text-webpack-plugin": "^1.0.1",
+    "jquery": "^3.1.0",
+    "velocity-animate": "^1.2.3",
+    "velocity-ui-pack": "^1.2.2"
+  }
+}

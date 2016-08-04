@@ -1,0 +1,7 @@
+{
+  "extends": "airbnb",
+  "rules" : {
+    "react/jsx-closing-bracket-location" : [0, "props-aligned"],
+    "react/jsx-no-bind" : [0, { "ignoreRefs" : true }]
+  }
+}
