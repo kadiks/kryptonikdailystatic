@@ -1,3 +1,20 @@
+<?php
+/**
+ * Template name: daily
+ *
+ * The template for displaying daily data company
+ *
+ * @package Hew
+ */
+?>
+<?php
+  $jsonStr = file_get_contents(getenv(HERMES_DAILY_JSON_LOCATION));
+  $jsonStr = str_replace("\r", "", str_replace("\n", "", $jsonStr));
+  /*$json = json_decode($jsonStr);
+  $users = $json['users'];
+  $projects = $json['projects'];
+  $developers = $json['developers'];*/
+?>
 <!DOCTYPE html>
 <!--
 /$$   /$$                                 /$$                         /$$ /$$
@@ -17,10 +34,11 @@
   <meta charset="UTF-8">
   <title>Kryptonik - Daily life of a company</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <link rel="stylesheet" href="css/font-awesome.min.css">
+  <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/font-awesome.min.css">
   <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
-  <link rel="stylesheet" href="css/app.css">
+  <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/app.css">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <?php googleanalytics(); wp_site_icon(); ?>
 </head>
 <body>
   <div class="container-fluid">
@@ -67,7 +85,7 @@
       <div class="row">
         <div class="col-xs-12">
           <h1 class="text-center">Managed by Jénaïc Cambré</h1>
-          <img src="img/jenaic_cambre.jpg"
+          <img src="<?php bloginfo('template_directory'); ?>/img/jenaic_cambre.jpg"
             class="img-circle center-block cv"
             role="presentation" />
         </div>
@@ -183,8 +201,8 @@
     </a>
   </footer>
   <script type="text/javascript">
-    var data = {users : 33, projects : 7, developers : 16};
+    var data = <?php echo $jsonStr; ?>;
   </script>
-  <script src="js/app.js"></script>
+  <script src="<?php bloginfo('template_directory'); ?>/js/app.js"></script>
 </body>
 </html>

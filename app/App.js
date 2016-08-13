@@ -104,33 +104,28 @@ class App {
 
     this.addEventListeners();
 
-    this.resize(this.WINDOW_WIDTH, this.WINDOW_HEIGHT);
-    this.animatePage(this.currentPageIndex, data);
+    this.animatePage(this.currentPageIndex, window.data);
+  }
+
+  onChangePageComplete() {
+    velocity(this.pages.eq(this.currentPageIndex), 'transition.flipXIn', {
+      complete: this.animateComplete.bind(this),
+    });
   }
 
   onResize(e) {
     this.WINDOW_WIDTH = e.target.innerWidth;
     this.WINDOW_HEIGHT = e.target.innerHeight;
-    this.resize(this.WINDOW_WIDTH, this.WINDOW_HEIGHT);
   }
 
   revealStalkingPanel() {
     velocity($('.stalk'), 'transition.slideUpIn');
   }
 
-  resize(windowWidth, windowHeight) {
-    /*this.containerFluidEl.css({
-      marginLeft: -windowWidth * this.currentPageIndex,
-      width: windowWidth * this.pagesLength + 40,
-    });*/
-    /*this.pages.css({
-      width: windowWidth,
-    });*/
-  }
-
   changePage() {
     this.currentPageIndex++;
-    /*velocity(this.containerFluidEl, {
+    /*
+    velocity(this.containerFluidEl, {
       marginLeft: -this.WINDOW_WIDTH * this.currentPageIndex,
     }, {
       duration: 600,
@@ -138,11 +133,7 @@ class App {
       complete: this.animateComplete.bind(this),
     });*/
     velocity(this.pages.eq(this.currentPageIndex - 1), 'transition.flipXOut', {
-      complete : () => {
-        velocity(this.pages.eq(this.currentPageIndex), 'transition.flipXIn', {
-          complete : this.animateComplete.bind(this)
-        })
-      }
+      complete: () => this.onChangePageComplete,
     });
   }
 }

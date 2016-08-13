@@ -6,7 +6,15 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node index.js",
-    "lint": "./node_modules/.bin/eslint ./app/"
+    "lint": "./node_modules/.bin/eslint ./app/",
+    "predist" : "rm -rf ./dist/*",
+    "dist" : "npm run dist:fonts && npm run dist:less && npm run dist:css && npm run dist:img && npm run dist:js && npm run dist:php",
+    "dist:fonts": "cp -r ./fonts ./dist/fonts",
+    "dist:less": "lessc ./less/app.less ./dist/css/app.css",
+    "dist:css": "cp ./css/font-awesome.min.css ./dist/css/font-awesome.min.css",
+    "dist:img": "cp -r ./img ./dist/img",
+    "dist:js": "cp -r ./js ./dist/js",
+    "dist:php": "node ./script/php"
   },
   "repository": {
     "type": "git",

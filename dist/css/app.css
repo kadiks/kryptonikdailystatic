@@ -6,8 +6,8 @@
  */
 @font-face {
   font-family: 'SnappyService';
-  src: url(baf73814f608475397f6ab37796a9847.eot);
-  src: url(baf73814f608475397f6ab37796a9847.eot?#iefix) format('embedded-opentype'), url(e99baa9d839a99be8b0edbcb9d25c356.woff) format('woff'), url(08b83ec088cf517c0367b470654f9501.ttf) format('truetype'), url(6603a2c649b107121118fe6f0f877196.svg#SnappyService) format('svg');
+  src: url('../fonts/SnappyService.eot');
+  src: url('../fonts/SnappyService.eot?#iefix') format('embedded-opentype'), url('../fonts/SnappyService.woff') format('woff'), url('../fonts/SnappyService.ttf') format('truetype'), url('../fonts/SnappyService.svg#SnappyService') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -199,5 +199,3 @@ body {
   height: 70px;
   background-color: #129700;
 }
-
-/*# sourceMappingURL=app.css.map*/
